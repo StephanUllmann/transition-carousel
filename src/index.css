@@ -1,0 +1,102 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+:host {
+  min-width: min(50%, 20rem);
+  container: carousel inline-size;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 20rem;
+  gap: min(1rem, 1cqw);
+}
+
+::slotted(img) {
+  width: 100%;
+  object-fit: contain;
+}
+
+::slotted(img:first-of-type) {
+  outline: 2px solid red;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+::slotted(img:not(:first-of-type)) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: 10%;
+}
+
+.image-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-rows: 2rem 1fr 2rem;
+}
+
+.images {
+  overflow-x: auto;
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shrink-x {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+transition-carousel:not(:defined) {
+  display: none;
+  --primary-color: hsl(241, 80%, 61%);
+}

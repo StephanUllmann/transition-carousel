@@ -1,0 +1,49 @@
+{
+  "name": "@sullmann/lit-carousel",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A customizable image carousel web component built with Lit",
+  "keywords": [
+    "lit",
+    "web component",
+    "carousel",
+    "image gallery",
+    "custom element"
+  ],
+  "author": "Stephan Ullmann",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StephanUllmann/transition-carousel.git"
+  },
+  "homepage": "https://github.com/StephanUllmann/transition-carousel#readme",
+  "bugs": {
+    "url": "https://github.com/StephanUllmann/transition-carousel/issues"
+  }
+}
