@@ -13,7 +13,7 @@ export class TransitionCarousel extends LitElement {
   featuredImg: HTMLImageElement | null = null;
 
   @property({ type: Number, reflect: true, attribute: 'interval' })
-  intervalDuration = 3000;
+  intervalDuration = 5000;
 
   intervalId: ReturnType<typeof setInterval> | null = null;
 
@@ -29,7 +29,7 @@ export class TransitionCarousel extends LitElement {
       padding: 4px;
       outline: 2px solid var(--border-color, var(--primary-color));
       outline-offset: -5px;
-      height: 25rem;
+      height: var(--height, 25rem);
 
       *,
       ::slotted(*) {
