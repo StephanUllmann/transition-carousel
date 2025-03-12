@@ -5,7 +5,7 @@ A customizable image carousel web component built with Lit.
 ## Installation
 
 ```bash
-npm install @sullmann/transition-carousel
+npm install @stephanullmann/transition-carousel
 ```
 
 ## Usage
@@ -13,16 +13,18 @@ npm install @sullmann/transition-carousel
 ### Import the component in JS
 
 ```js
-import '@sullmann/transition-carousel';
+import '@stephanullmann/transition-carousel';
 ```
 
 ### Use in HTML
 
 ```html
-<transition-carousel interval="5000">
-  <img src="path/to/image1.jpg" />
-  <img src="path/to/image2.jpg" />
-  <img src="path/to/image3.jpg" />
+<transition-carousel style="--height: 25rem;" interval="5000">
+  <img src="https://placedog.net/500" />
+  <img src="https://placedog.net/400" />
+  <img src="https://placedog.net/550" />
+  <img src="https://placedog.net/450" />
+  <img src="https://placedog.net/300" />
 </transition-carousel>
 ```
 
